@@ -7,29 +7,22 @@ import java.util.Date;
  * @since : 8/7/2021
  **/
 public class Customer {
-    int CID;
-    String name;
-    String address;
-    String Tel;
-    int tel;
+    String name ;
+    String address ;
+    String age ;
+    String salary ;
+    String tel;
 
-    public Customer() {
+    public Customer(String name) {
+
     }
 
-    public Customer(int CID, String name, String address, String tel, int tel1) {
-        this.CID = CID;
+    public Customer(String name, String address, String age, String salary, String tel) {
         this.name = name;
         this.address = address;
-        Tel = tel;
-        this.tel = tel1;
-    }
-
-    public int getCID() {
-        return CID;
-    }
-
-    public void setCID(int CID) {
-        this.CID = CID;
+        this.age = age;
+        this.salary = salary;
+        this.tel = tel;
     }
 
     public String getName() {
@@ -48,26 +41,38 @@ public class Customer {
         this.address = address;
     }
 
-    public String getTel() {
-        return Tel;
+    public String getAge() {
+        return age;
     }
 
-    public void setTel(int tel) {
-        this.tel = tel;
+    public void setAge(String age) {
+        this.age = age;
+    }
+
+    public String getSalary() {
+        return salary;
+    }
+
+    public void setSalary(String salary) {
+        this.salary = salary;
+    }
+
+    public String getTel() {
+        return tel;
     }
 
     public void setTel(String tel) {
-        Tel = tel;
+        this.tel = tel;
     }
 
     @Override
     public String toString() {
         return "Customer{" +
-                "CID=" + CID +
-                ", name='" + name + '\'' +
+                "name='" + name + '\'' +
                 ", address='" + address + '\'' +
-                ", Tel='" + Tel + '\'' +
-                ", tel=" + tel +
+                ", age='" + age + '\'' +
+                ", salary='" + salary + '\'' +
+                ", tel='" + tel + '\'' +
                 '}';
     }
 }
